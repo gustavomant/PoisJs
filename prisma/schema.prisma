@@ -1,0 +1,19 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:memorydb?mode=memory&cache=shared"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output = "../../node_modules/.prisma/client"
+}
+
+model PointOfInterest {
+  @@map("points_of_interest")
+
+  id          String @id @default(cuid())
+  name        String @unique
+  coordinateX Int @map("coordinate_x")
+  coordinateY Int @map("coordinate_y")
+}
+  

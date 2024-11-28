@@ -1,0 +1,1 @@
+{"root":["./src/app.ts","./src/server.ts","./src/contracts/PoiContracts.ts","./src/controllers/PoiController.ts","./src/prisma/client.ts","./src/routes/poiRoutes.ts","./src/usecases/PoiUseCase.ts"],"version":"5.7.2"}

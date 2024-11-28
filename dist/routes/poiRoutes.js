@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const PoiController_1 = require("../controllers/PoiController");
+const PoiUseCase_1 = require("../usecases/PoiUseCase");
+const router = (0, express_1.Router)();
+const poiUseCase = new PoiUseCase_1.PoiUseCase();
+const poiController = new PoiController_1.PoiController(poiUseCase);
+router.get("/", poiController.getAllPois.bind(poiController));
+router.post("/", poiController.createPoi.bind(poiController));
+exports.default = router;
